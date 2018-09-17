@@ -1,0 +1,68 @@
+SQL Cheat Sheet
+
+< Update Values>
+
+update table_name
+set column1=value1, column2=value2
+where <>,
+
+< Update All Records>
+
+update table_name
+set column1=value1, column2=value2
+
+< Search for null value:>
+
+set column_name
+from table_name
+where column_name is null;
+
+< Set Value to null>
+
+update table_name
+set column_name= NULL;
+
+< Fuzzy Search>
+
+select column_name
+from table_name
+where email_address like '%string%';
+
+< Finding Duplicates>
+
+SELECT display_name, COUNT(display_name)
+FROM msbuddyprod.user_profile
+group by display_name
+having count(display_name) > 1 order by count(display_name) desc;
+
+<search for a specific name>
+select count(*) from user_profile where first_name like "%lisa%"
+
+
+<sorting>
+order by column_name
+
+<resetting matches>
+SELECT * FROM bcbuddystage.match_record WHERE user1 = 'a7db5675ae34eda4872c0248284cbdcc0488cde3b13a39312e7c5d87591b1d8a' 
+OR user2 = 'a7db5675ae34eda4872c0248284cbdcc0488cde3b13a39312e7c5d87591b1d8a';
+- set flag to "0"
+
+<count>
+
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+<inner join>
+Select bcbuddyprod.blocked_user.blocked_user, bcbuddyprod.user_profile.email_address, bcbuddyprod.user_profile.display_name
+From bcbuddyprod.user_profile
+Inner Join bcbuddyprod.blocked_user On bcbuddyprod.user_profile.user_id=bcbuddyprod.blocked_user.blocked_user;
+
+
+<count and inner join>
+
+Select bcbuddyprod.blocked_user.blocked_user, bcbuddyprod.user_profile.email_address, bcbuddyprod.user_profile.display_name, count(blocked_user)
+From bcbuddyprod.blocked_user
+Inner Join bcbuddyprod.user_profile On bcbuddyprod.user_profile.user_id=bcbuddyprod.blocked_user.blocked_user
+group by blocked_user
+having count(blocked_user) > 1 order by count(blocked_user) desc;

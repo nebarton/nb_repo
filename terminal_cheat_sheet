@@ -1,0 +1,24 @@
+Terminal Cheat Sheet
+
+<modifying profile file>
+nano ~/.bash_profile 
+Control + O to save, click Y, verify file name, click Control + X
+
+<reload Profile File>
+source ~/.bash_profile
+
+<Set ANDROID_HOME path> 
+echo export "ANDROID_HOME=/Users/yourName/Library/Android/sdk" >> ~/.bash_profile 
+
+<Check ANDROID_HOME path>
+echo $ANDROID_HOME
+
+<set Java Path>
+To confirm JDK is installed: which java
+To confirm java version: java -version
+Set JAVA_HOME: echo export "JAVA_HOME=\$(/usr/libexec/java_home)" >> ~/.bash_profile
+Reload file: source ~/.bash_profile
+Add the following to set BIN fo Java: export PATH=${JAVA_HOME}/bin:$PATH
+
+<set Maven Path>
+echo export "M2_HOME=/usr/local/Cellar/maven/3.5.3/libexec" >> ~/.bash_profile
