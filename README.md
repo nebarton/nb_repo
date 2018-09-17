@@ -1,2 +1,5 @@
-# cheat-sheets
-Short cuts to help make work more efficient
+# Commonly used commands:
+- SQL
+- Linux Terminal
+- GIT
+- Java for Testers tutorial
