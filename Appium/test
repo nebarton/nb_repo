@@ -1,0 +1,2 @@
+// javascript
+const wdio = require("webdriverio");

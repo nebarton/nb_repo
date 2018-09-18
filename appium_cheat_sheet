@@ -1,0 +1,25 @@
+Appium Background:
+
+<Appium Editor(client)> ---> <Appium Server(Android and iOS drivers/framework) ---> <Mobile Device (Apps)>
+- Commands are sent via JSON wild protocol
+- Commands reache the server as an http session object  
+- Appium Server will interpret whether to use android or iOS framework
+
+Writting Appium Tests:
+- "desired capabilities" are writtent to declare commands
+
+Appium Setup Instructions:
+
+(1) Check JDK version:
+- Command: javac - version
+(2) Check Maven version:
+- Command: mvn -version
+(3) Add to Path: Android, Java, and Node
+(4) Download Android Sever
+(5) Download Selenium jar
+(6) Create Appium project in Eclipse
+(7) Download Appium drivers
+(8) Download Selenium drivers
+(9) Download Maven plugin for Ecliose
+Running APpoum Test:
+- Start Appium server before sending a command 

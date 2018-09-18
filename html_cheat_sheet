@@ -1,0 +1,104 @@
+Source: Codeademy HTML Course
+
+HTML Basics:
+
+<!DocType html>
+<html>
+<head> <title> browse </title>
+</head>
+
+DEFINITIONS:
+<head>: Contains metadata about the page that isn't displayed on the action page 
+- example: Browser Title Tag
+
+ABSOLUTE LINKS:
+Linking to other web pages:
+<a> anchor - include text of the link
+- external links aka absolute path
+
+href attribute - hyperlink reference
+- example: <a href="http://oprah.com"> This is a link to a website </a>
+
+target attribute - how link should open
+- example: new tab = _blank
+- example: <a <insert attribute>> insert text </a>
+
+RELATIVE LINKS:
+- HTML pages are typically stored in root directory on a server
+- example: "About page, contact page, etc."
+- user relative URL, assuming files are in a centralized place
+- example: ./index.html
+
+JUMP TO SECTION WITHIN A PAGE:
+- How to jump to a specific place in a web page 
+(1) Give the target an id
+<p id="top"> Top of the page </p>
+<h1 id= "bottom"> Bottom of the page </h1>
+- can add an id to any element on a webpage
+- target link = string that cntains # of characters & the target element's id
+<ol> = ordered list
+<ul> = unordered list
+- example:
+<div id="introduction
+<ul>
+<a href = "#introduction">INtroduction </a></ul>
+
+IMAGES: 
+- example: <a href = "www.website.com" target ="_blank">
+- <image src "#" alt="A text"/></a>
+- pattern: <a<image/></a>
+
+WHITESPACE: 
+- used to visualize relationships between elements (whitespace & indentation)
+- whitespace between elements is ignored by the browser
+- put each element on their own line to make more read-able
+
+COMMENTS:
+<!--->
+
+TABLE: 
+
+<table>
+<tr> = table row
+<td> = table data (relative to row)
+<tb> = table header (relative)
+- remember to crate a blank header
+table header scope attribute: row, column
+example: <th scope ="row"> RowTitle </th>
+
+Data spanning multiple columns via COLSPAN attribute, value in integers
+exmaple: <td colspan="2"> out of town </td>
+
+Data spanning multiple rows via ROWSPAN attribute, value in integers
+example: <td rowspan="2">work</td>
+
+Table Body: <tbody>
+- typically used for large tables
+- contains all table data , including headers
+
+Table Header: <thead>
+- requires a row
+
+<table>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thread>
+	
+Table Footer: <tfoot>
+- Section of the bootom of the table
+exmaple: table sums, differences, and other data results
+
+<tfoot>
+	<td> Total </td>
+</tfoot>
+
+STYLING TABLES WITH CSS
+
+example: table,th,td{
+	border: 1px solid black;
+	fomt-family: Arial, sans-serif;
+	text align: center;
+}	
+
