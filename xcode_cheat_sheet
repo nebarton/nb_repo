@@ -1,0 +1,6 @@
+xcode_cheat_sheet:
+
+BUILD FAILURE: RCCManager
+- clean the cache within xcode (xcode > preferences > location > click arrow under "Derived Data" field > delete the app folder referenced in this directory)
+- run npm run clean (within the app folder)
+- run whack run start  (Within the app folder)
