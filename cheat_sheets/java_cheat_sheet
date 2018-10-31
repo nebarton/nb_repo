@@ -1,0 +1,232 @@
+package declaration:
+
+Class Declaration {
+	object declaration ();
+	variable declaration ();
+	method Declaration {
+
+	}
+}
+
+Java Basics:
+- PACKAGES:
+	- Name: All lower case, no camel case
+	- Class library aka API aka Application Programming Interface
+	- Typically the inverse internet domain name (ex: com.example.mypackage for example.com domain)
+- CLASS:
+	- Name: Starts with a capital letter and ends with the word "test", camel case
+	- Only have to be unique within a package
+	- Class declaration: 
+		- PUBLIC: Any class in any package can import this class
+			- All JUnit classes will be public
+		- {}: Block markers that indicate the class body, contains all method declarations
+	- Don't have to import classes already built into the language (ex: Integer). These classes exist in the java.lang package
+	- Autoboxing, means we don't have to instantiate primitive type classes, it will do it automatically
+
+- METHODS:
+	- Name: Starts wih lower case letter, camel case
+	- Method Declaration: Enclosed within the class body
+		- PUBLIC: Available to any class that has permission to import method's parent class
+		- VOID: Method doesn't return a value, typically used for JUnit tests
+		- (): Parameter the method can be called with
+	- The MAIN method is only included in classes that are executable
+	- THE STATIC method operates at the class level, and not the object level, so doesn't need to be instantiated into a variable in order to call it (all the methods that display after pressing.)
+
+- EXPRESSION:
+	- construct made of variables, operations, method invocations, all that evaluate to a single value
+
+	Example:
+	int cadence =0;
+	anArray[0] = 100;
+	system.out.printlin("ELement 1 at index0: "+ anArray[0]);
+
+	int result = 1 +2;
+	if (value1 == value2)
+		System.out.printlin("value1 == value2");
+- INTERFACT:
+	- Methods form the object's interface with the outside world (ex: buttons on the front of the tv are the interface between you and the electrical wiring inside the the tv)
+	- Group of related methods with empty bodies
+	- Class declaration includes the IMPLEMENTS keyword - formal declaration of the behavior it will provide
+	- Interfaces form a contract between the class and the outside world, contract is enforced a build time by the compiler
+
+interface Bicycle {
+	void changeCadence(int newValue);
+}
+
+class NicoleBicycle implements bicycle{
+	voide changeCadence(int newValue){
+		cadence= newValue;
+	}
+}
+
+
+
+
+- VARIABLES:
+	- Symbol that represent some other value - use to store values, strings, etc.
+	- Variables declared at the class level are called FIELDS - are also static
+	- FIELDS are also constants, meaning they can't be changed
+	- To declare a variable:
+		- type name;
+- CONSTANDS:
+	-Name: All upper case with "_" as word delimiter (ex: MAX_VALUE)
+	- To user, don't need to add () because are not calling a method, instead are accessibng a constant variable
+	(ex: Integer.MAX_VALUE)
+- INSTANTIATE VARIABLES
+
+INSTANTIATE
+- Importing a known class containing object variables (ex: Integer)
+- To use a class we instantiate it with the "new" keyword. This keyword creates a new instance of a class
+
+CONSTRUCTOR:
+- method on a class which is called when a new instance of the class is created
+- take parameters, but never returns a value and is declared without a return type
+- has the same name as the class indlucing starting with an uppercase letter
+
+EXAMPLE:
+
+Integer four  = new Integer(4);
+assertEquals(intValue returns int5", 5, five.intValue());
+
+Tools:
+- JUNIT: Type of method that has a test annotation
+- MAVEN: Dependency management and build tool
+
+Code Format:
+- Directory for tests: src/test/java folder
+- Directory for java not used for asserting behavior: src/ main/ java
+- Split abstraction code from separate folder
+
+Assertions:
+- assertEquals: checks if two values are equal
+Example: 
+@Test
+public void twoPlusTwo{
+	int answer = 2+2;
+	assertEquals("2+2=4", 4, answer);
+}
+
+
+
+OBJECT ORIENTED PROGRAMMING:
+- Objects have a state(fields) and behavior(methods)
+- An object stores its state in variables and exposes it's behavior in methods
+- Methods operate on an objects interal state and are the ways that objects talk to each other aka METHODS for changing a state 
+- DATA ENCAPSULATION - hidiing internal state and requiring all interactions to be performed through an objec'ts method
+	- Methods are used to change the state of an object
+	- The object is in control of how the outside world is allowed to use it
+	- Modularity: Source code for objects can be maintained independenly
+	- Information-hiding: An object controls access to it's internal "guts" aka methods
+	- Code re-use
+- STRING object: state and behavior for character strings
+- FILE object: create/delete/inspect/compare/modify a fole or filesystem
+- SOCKET object: creation and user of network sockets
+- GUI objects: control buttons and checkboxes, and anything else related to Graphic User Interface
+- 3 Parts to an object:
+	- Declaration: Variable declarations that associate a variable name with an object type
+	Instantiation: "new" keyword is a java operator that creates the object
+	Initialization: "new" operator is followed by a call to a constructgor, which initializes the new object
+
+RESOURCES:
+- API Resource: https://docs.oracle.com/javase/8/docs/api/index.html
+- Oracle Java Tutorials: https://docs.oracle.com/javase/tutorial/
+- Difference between JUnit and TestNG: https://www.guru99.com/junit-vs-testng.htmlb
+
+
+
+IDE
+- Integrated Development Environment
+- Contains a text editor, compiler, and debugger
+- Need to install the JDK to write java programs (Java Development Kit)
+- The main function is the first function called by the runtime system and ultimaely your code must be connected to this call in order to be executed by the program
+
+Attributes
+- A way to describe a class
+
+Methods/functions
+- ways we interact with the class
+
+Class
+- Description/ Blue Print
+
+Instance of a class
+1. Make the blueprint (car)
+2. Make instances of the class (blue car, black car)
+
+
+1. define variables
+2. build constructors
+
+IDE
+- Command + Click will show the declaration of any class
+
+ARRAY
+- container that stores a sequence of values of the same type
+- want to be able to store and access values quickly
+- Access static/class methods for array by typing "Array." Methods called by the class, and not the class instance or object
+
+- Arrays class, has static methods that you can use to compare, fikll, and sort arrays, and convert them to strings
+- Printing Arrays gives a memory address, because arrays are reference types. To see what is actually going on in the array, use the string method
+
+
+public void MyMethod(string myParameter)
+Parameters as the placeholders for arguments
+Ex: Add(x,y)
+x and why are paramenters
+
+Ex: Add(3,2)
+3,2 are the arguments
+ARGUMENT
+ - Actual value that gets passed into a function
+ Ex: changePaintColor("Red")
+ changePaintColor is the method
+ Red is the argument
+
+
+ PARAMETERS
+ - Variable in a method definition
+ Ex: public static void changePaintColor(String color){}
+ Color is the parameter
+ Parameter is the input variable
+
+
+ **When a method is called, the parameters get the value of the arguemnts that were passed to the function**
+
+ Call By Value - original arguments of a method are never changed
+
+ Refreences:
+ tutorialPoint
+ StackOverflow
+ Oracle Java Documentation
+
+ Object-oriented programming concepts
+ - Develop a blueprint (class)
+ - Create instances of a class using a constructor
+
+
+Operators
+- AND: both inputs must evaluate to true
+- OR: at least one input must evaluate to true
+- NOT: takes only 1 input, if the input evaluates to false then the express is true and vice versa if the input evaluates to true
+
+
+UML: Unified Modeling Language  - helps developers visualize the flow of a program
+
+While Loop
+- only execute the loop while the condition evaluates to true
+
+Do-While Loop Theory
+Execute statements before checking teh condition, and if that condition is true we execute the statements again
+
+For Loop
+-initialize a variable first, check the condition, and then increment/decrement and check more statements
+
+Java Libraries
+
+Java.lang - core language stuff
+java.util -generic utilities
+java.net - infrastructure network, with api to make calls
+
+Breakpoints
+-allow you to pause a program to get more information
+**Find tutorial on debugger and breakpoints in IDE

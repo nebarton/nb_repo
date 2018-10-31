@@ -1,0 +1,80 @@
+Appium Environment:
+
+Appium Server v1.9.0
+Appium Background:
+
+<Appium Editor(client)> ---> <Appium Server(Android and iOS drivers/framework) ---> <Mobile Device (Apps)>
+- Commands are sent via JSON wild protocol
+- Commands reache the server as an http session object  
+- Appium Server will interpret whether to use android or iOS framework
+
+Writting Appium Tests:
+- "desired capabilities" are writtent to declare commands
+
+Appium Setup Instructions:
+
+(1) Check JDK version:
+- Command: javac - version
+(2) Check Maven version:
+- Command: mvn -version
+(3) Add to Path: Android, Java, and Node
+(4) Download Android Sever
+(5) Download Selenium jar
+(6) Create Appium project in Eclipse
+(7) Download Appium drivers
+(8) Download Selenium drivers
+(9) Download Maven plugin for Ecliose
+Running APpoum Test:
+- Start Appium server before sending a command 
+- Import Appium and Selenium Jars and associate to java build path for project
+
+
+Appium iOS Setup:
+- Download/clone this repository: https://github.com/appium/ios-uicatalog
+- UICatalhor.xcodeproj file - it will be launched 
+- Appium Desktop - Appium created an appium inspector to inspect iOS elements
+-- 
+
+
+CREATE BASE  CLASS FOR NEW OS
+- Set the desired capabilities: device type + emulautor/simulator name
+
+
+Java
+- Without the public static void main method, unable to run as a java application (except when using TestNG)
+TestNG
+- Download TestNG plugin
+	- Navigate to this page and find the download URL: http://beust.com/eclipse
+	- Example download URL: http://beust.com/eclipse
+	- In Eclipse, go to Help > Install New Software > Type the URL into the URL field and wait for the software to download
+	- Follow instructions, including confirming unsigned certificates, and restarting Eclipse
+	- To make sure installation was correct go to Eclipse > Preferences > and make sure TestNG i s listed in the left side panel
+- Create a new java project
+- Create a new class (don't check the public static main checkbox)
+- @Test annotation is equal to the plain java "public static void main"
+- Can write multiple tests in a single fine
+- By default, TestNG runs tests alphabetically
+- Understand the following methods:
+	- @BeforeMethod (prerequisite)
+	- @AfterMethod (post-requisite)
+	- @BeforeTest (prerequisite for all test cases)
+	- @AfterTest (postrequisite for all test cases)
+	- @BeforeSuite - method lives under TestNG file, scans for this method and then executes it 
+- TestNG XML file
+	- Can batch run all test cases
+	- New > Other > XML File > XML File from Template
+	- Class names are defined using the package name and class name
+
+- Issues with appium finding xcode:
+	https://stackoverflow.com/questions/14334708/xcrun-cant-find-xcode-path
+
+
+
+/Users/nbarton/Library/Developer/Xcode/DerivedData/MSBuddy-cwncamulzmszxnbhkghxlydjvzzw/Build/Products/Debug-iphonesimulator/MSBuddy.app
+
+
+To change xcode versions:
+- Assuming you want to choose /Applications/Xcode7.app: 
+- Command to Set default Xcode:  sudo xcode-select -s /Applications/Xcode.app/Contents/Developer 
+- Command to launch appium from terminal: appium
+

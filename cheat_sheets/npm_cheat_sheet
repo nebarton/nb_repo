@@ -1,0 +1,9 @@
+npm_cheat_sheet
+
+Stay up to date on the lates version
+
+Background
+- npm is a software registry
+- allow for package sharing and to download updates when they are made
+- package: directory with 1 or more files, contains at package.json file in it, typically small and relatedd to solving one problem
+- can also be used as part of the build process - store the build process in the package.json file

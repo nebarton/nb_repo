@@ -1,0 +1,51 @@
+Requirements to Test:
+
+- Enter Username
+- Create Task
+- Edit Task
+- Delete Task
+
+
+Testing Environment:
+- xCode 10
+- Eclipse
+- iPhone 7 simulator
+- iOS 12
+- Appium 1.7.0 + Selenium + Java (Code included as a text file)
+- testNG 
+
+
+- "Information explaining code"
+	- I limited myself to 2 hours to complete this exercise and unfortunately was only able to produce a "smoke test" of the app
+	- I started by first manually walking through the app to get a sense of how it generally works and to uncover any obvious issues
+	- After realizing (via the Appium iOS inspector) that many of the page elements did not have accessibilityId's or unique class names, I spent some time trying to be creative with locating the elements on the page. I definitely need a refresher in xPath+Indexing and given my self-imposed time constrained ended up using hard-coded values, which is not a very reliable solution but something that works in the short term.
+	- I created one test class and a number of test methods that walk through the different areas of the app
+	- The code contains some notes on future tests I would like to create to make the test coverage more reliable and robust.
+	- Appium + Selenium + Java + testNG are all used to run the tests. In case your environment is not setup in this way, i've included a .gif of the automation tests running and the appium logs
+
+-  "What can be done better by developers to make testing easier and more efficient"
+	- Messaging to end user can be more user friendly (ex: "There is no Task for Show" can be updated to something like "There are currently no tasks scheduled")
+	- Login Screen
+		- "What is your name?" possibly change to "Please enter a username". Ideally, there would be logic to make sure the username is unique and some type of authentication process for the user to complete prior to gaining access to the app
+		- No validation message displays if the name field is not populated.
+		- There is no Log Out option
+	- Create Teask Form:
+		- Updated text needed for Task Name validation message
+	- Accessibility ID's on all page elements would be a nice improvement, as they are much more reliable than xpath or class names (since they are often not unique)	
+	- Create a consistent naming convention for accessibility ID's
+	- Once a task is created and the My Task List is displayed, the data within the row is not accessible(ex: Title, Username, Timestamp) so I wasn't able to automate each element in that display
+	- When the task list is populated, the "Add" button no longer has the AccessibilityID "acceptButton" associated and the classname is not unique on the screen
+	- The colors next to each task didn't seem to have any logic behind them, and were possibly randomly chosen. This could be confusing to the end user. 
+	- When multiple tasks are created they aren't sorted in a particular order.
+	- Tasks that have expired are not highlighted in any way, neither are tasks that are coming up soon
+	- BUG: when there is a long list of tasks and one is expanded, it overlaps the action buttons at the bottom of the screen (see attached screen shot)
+
+
+I'm learning both Java and Appium+Selenium at the same time and here is what I would plan to improve about the tests: 
+	
+	- My first objective when faced with a new automation task is to just "get something going" so that I can see how the app + appium play together. This helps me work out my possible timing/wait issue and determine what is best in my @BeforeMethod, @BeforeTest, @AfterMethod, and @AfterTest methods. As my confidence with Java + Appium increases, I'm sure my ramp-up time will begin to decrease and I will be able to produce efficient code right out of the gate. 
+	- Once the tests are  up and running, I review the code and begin to replace hard-coded values with variables and to split the script (if feasible) into locators in one file (ex: Page Object) and test methods in another file (ex: test class)
+	- I would then update the testNG.xml to allow for flexible test runs, based on groupings
+	- Being able to interact with the date picker would be a top priority to enhance the tests. My xPath+Index skills haven't been touched in a few months, as I'm use to working with Accessibility ID's and unique class names, but this is a skill I definitely want to improve on.
+	- Creating tests that loop through creating and deleting tasks, to test scrolling and other app features. I ran out of time to get this started.
+	- In general, I keep a close eye on development and production bugs that could potentially point to pocket of defects. These "pockets" are a great source of future automation projects 
