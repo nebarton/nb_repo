@@ -1,0 +1,10 @@
+react_native_cheat_sheet
+
+Review of release notes for .56:
+- "Babel" was updated and is not backwards compatible (code compiler)
+- Need to update to Node 8
+- iOS 9 is the minimum requirement
+- Xcode 9 is the minimum required version
+- Android projects are now compiled using the Android 26 SDK
+- WebView will only load https URL's by default
+- Geolocation is disabled by default

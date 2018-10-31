@@ -1,0 +1,5 @@
+maven_cheat_sheet
+
+Command Line:
+- Can run a test from the command line using: mvn test
+- Must be in the same directory as the root of your project (ex: same directory as the pom.xml)
