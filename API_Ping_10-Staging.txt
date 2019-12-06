@@ -1,0 +1,257 @@
+Run #1:
+
+Running 2m test @ https://staging-api.thriveglobal.com
+  12 threads and 12 connections
+  Thread calibration: mean lat.: 191.470ms, rate sampling interval: 600ms
+  Thread calibration: mean lat.: 188.746ms, rate sampling interval: 599ms
+  Thread calibration: mean lat.: 187.153ms, rate sampling interval: 601ms
+  Thread calibration: mean lat.: 191.676ms, rate sampling interval: 598ms
+  Thread calibration: mean lat.: 195.189ms, rate sampling interval: 596ms
+  Thread calibration: mean lat.: 193.802ms, rate sampling interval: 598ms
+  Thread calibration: mean lat.: 199.377ms, rate sampling interval: 599ms
+  Thread calibration: mean lat.: 194.051ms, rate sampling interval: 598ms
+  Thread calibration: mean lat.: 210.620ms, rate sampling interval: 596ms
+  Thread calibration: mean lat.: 192.437ms, rate sampling interval: 597ms
+  Thread calibration: mean lat.: 190.360ms, rate sampling interval: 600ms
+  Thread calibration: mean lat.: 192.807ms, rate sampling interval: 601ms
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   485.69ms    1.06s    6.01s    90.00%
+    Req/Sec     0.53      0.82     9.00     97.95%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%  116.35ms
+ 75.000%  194.56ms
+ 90.000%    1.19s
+ 99.000%    5.97s
+ 99.900%    6.02s
+ 99.990%    6.02s
+ 99.999%    6.02s
+100.000%    6.02s
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+      87.999     0.000000            1         1.00
+      96.319     0.100000          108         1.11
+      99.583     0.200000          216         1.25
+     104.703     0.300000          325         1.43
+     108.991     0.400000          432         1.67
+     116.351     0.500000          540         2.00
+     125.375     0.550000          594         2.22
+     131.327     0.600000          648         2.50
+     147.455     0.650000          702         2.86
+     163.839     0.700000          756         3.33
+     194.559     0.750000          810         4.00
+     243.455     0.775000          838         4.44
+     281.599     0.800000          864         5.00
+     308.735     0.825000          891         5.71
+     388.863     0.850000          918         6.67
+     635.903     0.875000          945         8.00
+     732.159     0.887500          959         8.89
+    1187.839     0.900000          972        10.00
+    1771.519     0.912500          986        11.43
+    2215.935     0.925000         1001        13.33
+    2830.335     0.937500         1015        16.00
+    2844.671     0.943750         1020        17.78
+    2889.727     0.950000         1030        20.00
+    3799.039     0.956250         1035        22.86
+    3930.111     0.962500         1041        26.67
+    3983.359     0.968750         1054        32.00
+    3983.359     0.971875         1054        35.56
+    3983.359     0.975000         1054        40.00
+    4902.911     0.978125         1058        45.71
+    4919.295     0.981250         1060        53.33
+    4968.447     0.984375         1065        64.00
+    4968.447     0.985938         1065        71.11
+    4972.543     0.987500         1068        80.00
+    5967.871     0.989062         1071        91.43
+    5967.871     0.990625         1071       106.67
+    6017.023     0.992188         1080       128.00
+    6017.023     1.000000         1080          inf
+#[Mean    =      485.686, StdDeviation   =     1063.056]
+#[Max     =     6012.928, Total count    =         1080]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  1188 requests in 2.00m, 414.18KB read
+  Socket errors: connect 0, read 0, write 0, timeout 36
+  Non-2xx or 3xx responses: 1188
+Requests/sec:      9.88
+Transfer/sec:      3.45KB
+
+Run #2
+
+Running 2m test @ https://staging-api.thriveglobal.com
+  12 threads and 12 connections
+  Thread calibration: mean lat.: 199.636ms, rate sampling interval: 621ms
+  Thread calibration: mean lat.: 190.728ms, rate sampling interval: 604ms
+  Thread calibration: mean lat.: 190.272ms, rate sampling interval: 603ms
+  Thread calibration: mean lat.: 190.992ms, rate sampling interval: 604ms
+  Thread calibration: mean lat.: 189.774ms, rate sampling interval: 601ms
+  Thread calibration: mean lat.: 193.400ms, rate sampling interval: 623ms
+  Thread calibration: mean lat.: 182.624ms, rate sampling interval: 606ms
+  Thread calibration: mean lat.: 182.104ms, rate sampling interval: 605ms
+  Thread calibration: mean lat.: 197.841ms, rate sampling interval: 605ms
+  Thread calibration: mean lat.: 189.916ms, rate sampling interval: 601ms
+  Thread calibration: mean lat.: 190.008ms, rate sampling interval: 602ms
+  Thread calibration: mean lat.: 194.888ms, rate sampling interval: 602ms
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   286.65ms  594.42ms   4.36s    95.63%
+    Req/Sec     0.52      0.68     8.00     99.40%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%  132.74ms
+ 75.000%  240.38ms
+ 90.000%  317.18ms
+ 99.000%    4.36s
+ 99.900%    4.36s
+ 99.990%    4.36s
+ 99.999%    4.36s
+100.000%    4.36s
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+      88.063     0.000000            1         1.00
+      98.047     0.100000          110         1.11
+     104.191     0.200000          220         1.25
+     110.975     0.300000          330         1.43
+     116.735     0.400000          440         1.67
+     132.735     0.500000          550         2.00
+     142.591     0.550000          605         2.22
+     166.143     0.600000          659         2.50
+     191.999     0.650000          714         2.86
+     210.047     0.700000          769         3.33
+     240.383     0.750000          824         4.00
+     256.639     0.775000          851         4.44
+     266.751     0.800000          879         5.00
+     270.847     0.825000          906         5.71
+     289.023     0.850000          935         6.67
+     304.895     0.875000          961         8.00
+     313.855     0.887500          975         8.89
+     317.439     0.900000          989        10.00
+     331.007     0.912500         1002        11.43
+     407.807     0.925000         1016        13.33
+     477.183     0.937500         1030        16.00
+     495.871     0.943750         1037        17.78
+     502.783     0.950000         1044        20.00
+     504.063     0.956250         1050        22.86
+    1155.071     0.962500         1057        26.67
+    2248.703     0.968750         1066        32.00
+    2250.751     0.971875         1068        35.56
+    2260.991     0.975000         1074        40.00
+    2260.991     0.978125         1074        45.71
+    3332.095     0.981250         1084        53.33
+    3332.095     0.984375         1084        64.00
+    3332.095     0.985938         1084        71.11
+    3334.143     0.987500         1086        80.00
+    3334.143     0.989062         1086        91.43
+    4358.143     0.990625         1092       106.67
+    4358.143     0.992188         1092       128.00
+    4358.143     0.992969         1092       142.22
+    4358.143     0.993750         1092       160.00
+    4358.143     0.994531         1092       182.86
+    4362.239     0.995313         1098       213.33
+    4362.239     1.000000         1098          inf
+#[Mean    =      286.655, StdDeviation   =      594.421]
+#[Max     =     4358.144, Total count    =         1098]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  1201 requests in 2.00m, 418.71KB read
+  Socket errors: connect 0, read 0, write 0, timeout 24
+  Non-2xx or 3xx responses: 1201
+Requests/sec:      9.99
+Transfer/sec:      3.48KB
+
+Run #3
+
+Running 2m test @ https://staging-api.thriveglobal.com
+  12 threads and 12 connections
+  Thread calibration: mean lat.: 385.152ms, rate sampling interval: 770ms
+  Thread calibration: mean lat.: 133.646ms, rate sampling interval: 217ms
+  Thread calibration: mean lat.: 915.616ms, rate sampling interval: 4567ms
+  Thread calibration: mean lat.: 384.896ms, rate sampling interval: 770ms
+  Thread calibration: mean lat.: 136.426ms, rate sampling interval: 228ms
+  Thread calibration: mean lat.: 134.755ms, rate sampling interval: 228ms
+  Thread calibration: mean lat.: 134.656ms, rate sampling interval: 227ms
+  Thread calibration: mean lat.: 9223372036854776.000ms, rate sampling interval: 10ms
+  Thread calibration: mean lat.: 9223372036854776.000ms, rate sampling interval: 10ms
+  Thread calibration: mean lat.: 9223372036854776.000ms, rate sampling interval: 10ms
+  Thread calibration: mean lat.: 9223372036854776.000ms, rate sampling interval: 10ms
+  Thread calibration: mean lat.: 152.133ms, rate sampling interval: 226ms
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.45s     4.70s   36.86s    91.84%
+    Req/Sec     1.00      9.61   111.00     99.03%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%  107.46ms
+ 75.000%  122.94ms
+ 90.000%    3.00s
+ 99.000%   25.97s
+ 99.900%   35.82s
+ 99.990%   36.90s
+ 99.999%   36.90s
+100.000%   36.90s
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+      87.359     0.000000            1         1.00
+      95.807     0.100000          117         1.11
+      99.327     0.200000          232         1.25
+     101.311     0.300000          349         1.43
+     104.063     0.400000          461         1.67
+     107.455     0.500000          576         2.00
+     108.863     0.550000          634         2.22
+     110.527     0.600000          692         2.50
+     114.111     0.650000          750         2.86
+     118.143     0.700000          807         3.33
+     122.943     0.750000          864         4.00
+     125.823     0.775000          893         4.44
+     131.007     0.800000          922         5.00
+     139.903     0.825000          951         5.71
+     171.391     0.850000          980         6.67
+     260.351     0.875000         1008         8.00
+     986.623     0.887500         1023         8.89
+    2996.223     0.900000         1037        10.00
+    5144.575     0.912500         1052        11.43
+    7167.999     0.925000         1066        13.33
+    9166.847     0.937500         1080        16.00
+   10272.767     0.943750         1088        17.78
+   10862.591     0.950000         1095        20.00
+   11878.399     0.956250         1102        22.86
+   12877.823     0.962500         1109        26.67
+   13967.359     0.968750         1116        32.00
+   15032.319     0.971875         1120        35.56
+   17219.583     0.975000         1124        40.00
+   18350.079     0.978125         1127        45.71
+   20561.919     0.981250         1131        53.33
+   22724.607     0.984375         1134        64.00
+   23838.719     0.985938         1136        71.11
+   24936.447     0.987500         1138        80.00
+   25968.639     0.989062         1140        91.43
+   27049.983     0.990625         1142       106.67
+   27148.287     0.992188         1143       128.00
+   28147.711     0.992969         1144       142.22
+   29212.671     0.993750         1145       160.00
+   30277.631     0.994531         1146       182.86
+   31391.743     0.995313         1147       213.33
+   32489.471     0.996094         1148       256.00
+   32489.471     0.996484         1148       284.44
+   33619.967     0.996875         1149       320.00
+   33619.967     0.997266         1149       365.71
+   34701.311     0.997656         1150       426.67
+   34701.311     0.998047         1150       512.00
+   34701.311     0.998242         1150       568.89
+   35815.423     0.998437         1151       640.00
+   35815.423     0.998633         1151       731.43
+   35815.423     0.998828         1151       853.33
+   35815.423     0.999023         1151      1024.00
+   35815.423     0.999121         1151      1137.78
+   36896.767     0.999219         1152      1280.00
+   36896.767     1.000000         1152          inf
+#[Mean    =     1450.080, StdDeviation   =     4703.825]
+#[Max     =    36864.000, Total count    =         1152]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  1200 requests in 2.00m, 418.36KB read
+  Socket errors: connect 0, read 0, write 0, timeout 64
+  Non-2xx or 3xx responses: 1200
+Requests/sec:      9.99
+Transfer/sec:      3.48KB
